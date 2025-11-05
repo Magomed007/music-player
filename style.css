@@ -8,7 +8,7 @@ html {
     height: 100%;
     font-size: 16px;
     scroll-behavior: smooth;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     color: #FFFFFF;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .header {
@@ -380,5 +380,3 @@ body {
     text-decoration: none;
     color: #FFFFFF;
 }
-
-
