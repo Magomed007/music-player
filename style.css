@@ -143,15 +143,20 @@ body {
 }
 
 .action-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    z-index: 10;
+    display: block;
     width: 382px;
     height: 83px;
     background-image: radial-gradient(98.43% 2084.95% at 1.57% 7.83%, #B13E18 0%, #F3501A 100%);
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5), -4px -4px 30px rgba(255, 255, 255, 0.1);
+    
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .music-button {
@@ -160,11 +165,34 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 83px;
     color: #FFFFFF;
+
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.music-button:focus {
+    outline: none;
+}
+
+.action-item:active,
+.music-button:active {
+    background-image: radial-gradient(98.43% 2084.95% at 1.57% 7.83%, #B13E18 0%, #F3501A 100%);
 }
 
 .music-image {
+    position: relative;
+    z-index: 1;
     margin-left: -64px;
     margin-top: -206px;
 }
@@ -378,4 +406,3 @@ body {
     text-decoration: none;
     color: #FFFFFF;
 }
-
