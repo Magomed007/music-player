@@ -2,14 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1440, initial-scale=1.0">
     <meta name="description" content="Music Player: скачайте лучший музыкальный плеер для Windows и MacOS">
     <title>Music Player</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kenia&family=Libre+Barcode+128+Text&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="scale.js"></script>
+    <script>
+        (function() {
+            const physicalWidth = window.screen.width;
+            const siteWidth = 1440;
+            let scale = physicalWidth / siteWidth;
+            if (scale < 0.25) scale = 0.25;
+            if (scale > 1) scale = 1;
+            const viewport = document.createElement('meta');
+            viewport.name = 'viewport';
+            viewport.content = `width=${siteWidth}, initial-scale=${scale}, user-scalable=yes`;
+            document.head.appendChild(viewport);
+        })();
+    </script>
 </head>
 <body>
     <header id="HOME" class="header">
@@ -166,4 +177,3 @@
     </footer>
 </body>
 </html>
-
