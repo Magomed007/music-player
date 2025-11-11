@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 349px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+.player-container {
+    height: 754px;
+    background-image: linear-gradient(180deg, #4C4F57 0%, #343B43 100%);
+    position: relative;
+}
+
+.header {
+    height: 73px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.back-button {
+    display: block;
+    width: 73px;
+    height: 73px;
+    background-image: url(images/ellipse_1.svg);
+    background-repeat: no-repeat;
+    position: relative;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.back-button img {
+    position: absolute;
+    left: 31px;
+    top: 32.5px;
+}
+
+.header-link {
+    display: block;
+    position: absolute;
+    width: 42.55px;
+    height: 42.31px;
+    border-radius: 50%;
+    left: 19px;
+    top: 19px;
+
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.header-title {
+    width: 129px;
+    height: 23px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C1C4CB;
+    position: relative;
+    top: 35px;
+    left: 6px;
+}
+
+.menu {
+    display: block;
+    width: 73px;
+    height: 73px;
+    background-image: url(images/ellipse_1.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 12px;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.menu-icon {
+    width: 16.08px;
+    height: 0px;
+    position: relative;
+    left: 32px;
+    top: 36px;
+}
+
+.menu-icon span,
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.4px;
+    background: #91949B;
+}
+
+.menu-icon span {
+    top: 0px;
+}
+
+.menu-icon::before {
+    top: 3.76px;
+}
+
+.menu-icon::after {
+    top: 7.52px;
+}
+
+.main {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    width: 138px;
+    height: 29px;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #E7E7E7;
+}
+
+.main-text {
+    width: 55px;
+    height: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(231, 231, 231, 0.7);
+}
+
+.player-track {
+    position: relative;
+    width: 283.7px;
+    height: 28.2px;
+    margin-top: 53.83px;
+    display: flex;
+    align-items: center;
+}
+
+.track-full {
+    position: absolute;
+    width: 283.7px;
+    height: 9.4px;
+    background: #000000;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.15), -2px -2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.track-left {
+    position: absolute;
+    width: 132.39px;
+    height: 7.52px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background-image: linear-gradient(90deg, #D42F04 28.48%, #F3511C 98.17%);
+    border-radius: 5px;
+}
+
+.ring-inner {
+    position: absolute;
+    width: 13.24px;
+    height: 13.16px;
+    background: #E7B028;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 4px rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    left: 126.72px;
+    top: 25%;
+    z-index: 10;
+}
+
+.ring-outer {
+    position: absolute;
+    width: 28.37px;
+    height: 28.2px;
+    background: #262A2F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 4px rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    left: 119.15px;
+    top: 0%;
+    z-index: 1;
+}
+
+.footer {
+    margin-top: 45px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.rewind,
+.pause,
+.fast-forward {
+    position: relative;
+    width: 106px;
+    height: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.rewind,
+.fast-forward {
+    background-image: url(images/ellipse_2.svg);
+    background-repeat: no-repeat;
+}
+
+.rewind {
+    margin-left: -10px;
+}
+
+.pause {
+    margin-inline: -10px;
+    background-image: url(images/ellipse_3.svg);
+    background-repeat: no-repeat;
+}
+
+.footer-link {
+    display: block;
+    position: absolute;
+    width: 75.65px;
+    height: 75.21px;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
+
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.rewind-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 5px;
+    top: 10px;
+}
+
+.rewind-icon::before,
+.rewind-icon::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 12px solid #91949B;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.rewind-icon::before {
+    left: 0;
+}
+
+.rewind-icon::after {
+    left: 7.56px;
+}
+
+.pause-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 4px;
+    top: 4px;
+}
+
+.pause-icon::before,
+.pause-icon::after {
+    content: '';
+    width: 4px;
+    height: 12px;
+    background: #FFFFFF;
+}
+
+.fast-forward-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 5px;
+    top: 10px;
+}
+
+.fast-forward-icon::before,
+.fast-forward-icon::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 12px solid #91949B;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.fast-forward-icon::before {
+    right: 7.56px;
+}
+
+.fast-forward-icon::after {
+    right: 0;
+}
