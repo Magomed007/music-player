@@ -22,7 +22,6 @@ body {
     height: 1024px;
     background-image: url(images/header_background.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 .nav-container {
@@ -35,11 +34,13 @@ body {
 .logo-link {
     text-decoration: none;
     color: #FFFFFF;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .logo-title {
     font-family: 'Libre Barcode 128 Text';
-    font-style: normal;
     font-weight: 400;
     font-size: 80px;
     line-height: 80px;
@@ -58,7 +59,6 @@ body {
 .nav-item {
     text-decoration: none;
     font-family: 'Istok Web';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
@@ -82,7 +82,6 @@ body {
     width: 412px;
     height: 264px;
     font-family: 'Kenia';
-    font-style: normal;
     font-weight: 400;
     font-size: 150px;
     line-height: 150px;
@@ -93,7 +92,6 @@ body {
     width: 290px;
     height: 63px;
     font-family: 'Istok Web';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
@@ -121,7 +119,6 @@ body {
     padding-left: 122px;
     padding-top: 83px;
     font-family: 'Karla';
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 35px;
@@ -150,19 +147,22 @@ body {
     height: 83px;
     background-image: radial-gradient(98.43% 2084.95% at 1.57% 7.83%, #B13E18 0%, #F3501A 100%);
     border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5), -4px -4px 30px rgba(255, 255, 255, 0.1);
+    box-shadow:
+        4px 4px 4px rgba(0, 0, 0, 0.5),
+        -4px -4px 30px rgba(255, 255, 255, 0.1);
     
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 .music-button {
+    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
+    text-align: center;
     font-family: 'Karla';
-    font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 83px;
@@ -170,15 +170,6 @@ body {
 
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
 }
 
 .music-button:focus {
@@ -207,7 +198,6 @@ body {
     padding-top: 393px;
     padding-inline: 235px;
     font-family: 'Karla';
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 35px;
@@ -238,91 +228,58 @@ body {
     gap: 48px;
 }
 
-.download-first-item {
+.download-item {
     position: relative;
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 240px;
     height: 60px;
-    background-color: rgba(2, 2, 2, 0.9);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -4px -4px 4px rgba(255, 255, 255, 0.1);
+    box-shadow:
+        4px 4px 4px rgba(0, 0, 0, 0.25),
+        -4px -4px 4px rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
-.download-second-item {
-    position: relative;
-    z-index: 10;
+.download-link {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
     text-align: center;
-    width: 240px;
-    height: 60px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 30px;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.dark-theme {
+    background-color: rgba(2, 2, 2, 0.9);
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.dark-theme .download-link {
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.light-theme {
     background-color: #E3E3E3;
     border: 1px solid rgba(0, 0, 0, 0.7);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -4px -4px 4px rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
-.download-first-link {
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #FFFFFF;
-
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    border-radius: 30px;
-}
-
-.download-second-link {
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 60px;
+.light-theme .download-link {
     color: #000000;
-
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    border-radius: 30px;
+    line-height: 60px;
 }
 
 .version-info {
@@ -336,7 +293,6 @@ body {
     width: 419px;
     height: 28px;
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 600;
     font-size: 21px;
     line-height: 26px;
@@ -348,7 +304,7 @@ body {
     width: 431px;
     height: 110px;
     font-family: 'Montserrat';
-    font-style: normal;
+    
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
@@ -391,7 +347,6 @@ body {
 
 .footer-item {
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
@@ -419,7 +374,6 @@ body {
 .footer-logo-link {
     text-decoration: none;
     font-family: 'Kenia';
-    font-style: normal;
     font-weight: 400;
     font-size: 50px;
     line-height: 50px;
@@ -439,7 +393,6 @@ body {
 
 .contacts-text {
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
